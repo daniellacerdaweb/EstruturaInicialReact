@@ -1,0 +1,11 @@
+{
+  "extends": ["airbnb-typescript-prettier"],
+  "rules": {
+    "react/jsx-props-no-spreading": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "import/prefer-default-export": 0,
+    "no-use-before-define": 0,
+    "camelcase": 0,
+    "sort-imports": 0
+  }
+}

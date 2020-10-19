@@ -1,26 +1,33 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-export const  App: FunctionComponent = () => {
-  return <>
-   <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+}));
+
+export const App: FunctionComponent = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Button variant="contained">Default</Button>
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
+      <Button variant="contained" color="secondary">
+        Secondary
+      </Button>
+      <Button variant="contained" disabled>
+        Disabled
+      </Button>
+      <Button variant="contained" color="primary" href="#contained-buttons">
+        Link
+      </Button>
     </div>
-  </>
-}
-
-
-
-
-
+  );
+};
